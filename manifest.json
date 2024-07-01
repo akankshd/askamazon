@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "AskAmazon",
+    "version": "1.0",
+    "description": "An extension to analyze Amazon product reviews with ChatGPT.",
+    "permissions": ["activeTab"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_title": "AskAmazon"
+    }
+    ,
+    "content_scripts": [
+      {
+        "matches": ["*://www.amazon.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
